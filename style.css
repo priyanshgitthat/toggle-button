@@ -1,0 +1,68 @@
+         body{
+            margin: 0;
+            padding: 0;
+         }
+         
+         .mode{
+            min-height: 100dvh;
+            background-color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all .4s ease-in;
+
+            .box{
+                height: 200px;
+                width: 800px;
+                background-color: blue;
+                border-radius: 100px;
+                overflow: hidden;
+                display: flex;
+                align-items: center;
+                position: relative;
+                cursor: pointer;
+
+
+                .ball{
+                    width: 150px;
+                    height: 150px;
+                    background-color: black;
+                    border-radius: 100%;
+                    margin: 30px;
+                    position: absolute;
+                    left: 74%;
+                    transition: all .3s ease-in;
+                }
+            }
+
+        }
+
+        .mode.dark-theme{
+            background-color: black;
+        }
+
+        .box > .ball.light-theme{
+            background-color: white;
+            left: 0;
+        } 
+
+        @media  screen and (max-width:550px) {
+            .mode {
+                .box{
+                    width: 150px;
+                    height: 80px;
+
+                    .ball{
+                        width: 50px;
+                        height: 50px;
+                        margin: 10px;
+                        left: 54%;
+                    }
+                }
+            }
+
+            .box > .ball.light-theme{
+                background-color: white;
+                left: 0;
+            } 
+        }
